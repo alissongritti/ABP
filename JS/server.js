@@ -115,3 +115,29 @@ app.post('/salvar-respostas', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
+
+
+
+// Rota para obter o nome do usuário pelo email
+app.post('/get-nome-usuario', async (req, res) => {
+  const { email } = req.body;
+
+  if (!email) {
+      return res.status(400).json({ message: 'Email é obrigatório.' });
+  }
+
+  try {
+      // Consulta o nome do usuário com base no email
+      const result = await pool.query('SELECT nome FROM tbusuario WHERE email = $1', [email]);
+
+      if (result.rows.length === 0) {
+          return res.status(404).json({ message: 'Usuário não encontrado.' });
+      }
+
+      const nomeUsuario = result.rows[0].nome;
+      res.status(200).json({ nome: nomeUsuario });
+  } catch (error) {
+      console.error('Erro ao buscar o nome do usuário:', error);
+      res.status(500).json({ message: 'Erro ao obter o nome do usuário.' });
+  }
+});

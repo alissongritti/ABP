@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Judson, Inria-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 html, body {
@@ -110,6 +110,8 @@ header {
 .container {
     display: flex;
     height: 91.3vh;
+    width: 100%;
+    margin: 0 auto;
 }
 
 /* Barra lateral */
@@ -139,7 +141,7 @@ header {
 }
 
 .sidebar p {
-    font-family: Inria-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 a {
@@ -158,21 +160,22 @@ li > a:hover {
 .content {
     flex: 1;
     background-color: white;
-    padding: 40px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: center;
 }
 
 .content h2 {
     font-size: 1.5rem;
     color: #6a0dad;
     margin-bottom: 20px;
-    font-family: Judson;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .content p {
-    font-family: Inria-serif;
+    font-family: 'Open Sans', sans-serif;
     margin-bottom: 40px;
     margin-top: 40px;
 }
@@ -194,6 +197,18 @@ li > a:hover {
 }
 
 .pagination button {
+    background-color: #9b59b6;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    margin: 0 5px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-download {
     background-color: #9b59b6;
     border: none;
     color: white;
