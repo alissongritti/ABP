@@ -326,6 +326,9 @@ h3.highlight span {
     .hamburger {
         display: none; /* Esconde o botão de hambúrguer em telas grandes */
     }
+
+    
+    
 }
 
 /* Ajustes para telas de até 780px */
@@ -333,7 +336,7 @@ h3.highlight span {
     
     /* Barra de navegação */
     header {
-        flex-direction: column;  /* Faz com que os itens fiquem alinhados em coluna */
+        /* flex-direction: column;  /* Faz com que os itens fiquem alinhados em coluna */
         justify-content: center; /* Alinha os itens ao centro */
         padding: 0 20px; /* Ajusta o espaçamento da barra */
     }
@@ -391,6 +394,8 @@ h3.highlight span {
         justify-content: space-between;
         transition: left 0.3s ease-in-out; /* Transição suave ao abrir e fechar */
         z-index: 100;  /* Garante que a sidebar fique acima do conteúdo */
+        overflow: auto;
+        scrollbar-width: none; 
     }
 
     /* Quando a sidebar está aberta, ela se move para a tela */

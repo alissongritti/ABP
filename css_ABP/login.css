@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Judson;
+    font-family: 'Open Sans', sans-serif;
 }
 
 body {
@@ -166,11 +166,11 @@ header {
 }
 
 p{
-    font-family: Inria-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 p > a {
-    font-family: Inria-Sans;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .form-box h2 {
@@ -180,7 +180,7 @@ p > a {
 }
 
 .input-box {
-    font-family: Inria-serif;
+    font-family: 'Open Sans', sans-serif;
     position: relative;
     width: 100%;
     height: 50px;
@@ -189,7 +189,7 @@ p > a {
 }
 
 .input-box label {
-    font-family: Inria-serif;
+    font-family: 'Open Sans', sans-serif;
     position: absolute;
     top: 50%;
     left: 5px;
@@ -207,7 +207,7 @@ p > a {
 }
 
 .input-box input {
-    font-family: Inria-serif;
+    font-family: 'Open Sans', sans-serif;
     width: 100%;
     height: 100%;
     background: transparent;
@@ -264,7 +264,7 @@ p > a {
     font-size: 16px;
     color: white;
     font-weight: 600;
-    font-family: Inria-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .btn:hover {
@@ -283,7 +283,7 @@ p > a {
 }
 
 .login-register p a {
-    color: black;
+    color: blue;
     text-decoration: none;
     font-weight: 600;
 }
@@ -335,24 +335,31 @@ p > a {
 
 
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 780px) {
     header {
         padding: 20px 20px;
         font-size: 12.2px;
-    }
+    } 
     .wrapper.active-popup {
-        transform: scale(0.8);
+        transform: scale(0.7);
     }
 }
 
-@media only screen and (min-width:1920px){
+@media only screen and (min-width: 780px) and (max-width: 1520px) {
     .wrapper.active-popup {
-        transform: scale(1.4);
+        transform: scale(0.9);
     }
 }
 
 @media only screen and (min-width:1520px) and (max-width:1920px){
     .wrapper.active-popup {
-        transform: scale(1.3);
+        transform: scale(1.2);
     }
 }
+
+@media only screen and (min-width:1920px){
+    .wrapper.active-popup {
+        transform: scale(1.0);
+    }
+}
+
